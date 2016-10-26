@@ -40,6 +40,8 @@ with Terminal() as t:
         5, 11
     )
 
+    t.puts("Press any key to close.", 2, 20, color=(0, 255, 255))
+
     t.refresh()
 
     t.key()  # Wait until a keypress to close.
