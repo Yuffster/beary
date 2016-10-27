@@ -18,7 +18,7 @@ Extra features include:
 
 ## Examples
 
-I'm currently porting all the bearlib native examples to the new API.  You can view the full source code in the [examples](./examples/) directory.
+I'm currently porting all the bearlib native examples to the Beary API.  You can view the full source code in the [examples](./examples/) directory.
 
 ### Basic Output
 
