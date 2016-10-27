@@ -5,16 +5,23 @@ class Terminal():
 
     _color = 'white'  # Default foreground color.
     _title = 'Beary Terminal'  # Default title.
+    _settings = None  # {}
+    _open = False
 
     def __init__(self, title=None):
-        if title is not None:
-            term.title(self._title)
+        self._settings = {}
+        self.title(title or self._title)
         term.color(self._color)
-        term.set('window.size=80x25')
 
     def title(self, title):
+        self.config("window.title", title)
         self._title = title
-        term.set("window.title='{}'".format(title))
+
+    def config(self, key, val):
+        val = str(val.replace("'", "''"))
+        self._settings[key] = val
+        if self._open is True:
+            term.set("{}='{}'".format(key, val))
 
     def color(self, color):
         self._color = color
@@ -22,6 +29,13 @@ class Terminal():
 
     def open(self):
         term.open()
+        self.load_settings()
+        self._open = True
+
+    def load_settings(self):
+        for key, val in self._settings.items():
+            val = str(val.replace("'", "''"))
+            term.set("{}='{}'".format(key, val))
 
     def clear(self):
         term.clear()
@@ -51,7 +65,6 @@ class Terminal():
         return term.read()
 
     def __enter__(self):
-        self.open()
         return self
 
     def __exit__(self, *args):

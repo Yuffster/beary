@@ -4,10 +4,11 @@ import time
 
 with Terminal() as t:
 
-    t.title = "Beary: basic output"
-    t.color = "white"
-    t.size = (80, 25)
-    t.clear()
+    t.config('window.title', "Beary: Basic Output")
+
+    t.open()
+
+    t.config('window.size', '80x20')
 
     # Wide color range
     n = t.puts(2, 1, "[color=orange]1.[/color] Wide color range: ")
