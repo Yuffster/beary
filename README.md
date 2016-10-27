@@ -1,5 +1,7 @@
 # Beary
 
+![Serial Experiments Lain: The eponymous character sits in a dark room wearing her signature teddy bear pajamas, hood up.  In the background, a small piece of electronics sits on her desk, flickering ominously.](./graphics/lain_bear.gif)
+
 Beary is a Pythonic wrapper for [bearlibterminal](http://foo.wyrd.name/en:bearlibterminal).  It's built on top of the provided Python library, which is more or less a direct mapping to the C bindings.
 
 The purpose of this API is allow you to easily create pseudoterminal applications which work cross-platform but are much more capable than a stanard terminal.
@@ -10,7 +12,9 @@ Extra features include:
 * Arbitrary positioning
 * Graphics support
 
-![Serial Experiments Lain: The eponymous character sits in a dark room wearing her signature teddy bear pajamas, hood up.  In the background, a small piece of electronics sits on her desk, flickering ominously.](./graphics/lain_bear.gif)
+## Installation
+
+> pip install beary
 
 ## Examples
 
