@@ -2,11 +2,11 @@
 
 ![Serial Experiments Lain: The eponymous character sits in a dark room wearing her signature teddy bear pajamas, hood up.  In the background, a small piece of electronics sits on her desk, flickering ominously.](./graphics/lain_bear.gif)
 
-Beary is a Pythonic wrapper for [bearlibterminal](http://foo.wyrd.name/en:bearlibterminal).  It's built on top of the provided Python library, which is more or less a direct mapping to the C bindings.
+Beary is a Pythonic wrapper for [bearlibterminal](http://foo.wyrd.name/en:bearlibterminal) by [cfyzium](http://foo.wyrd.name/).  It's built on top of the provided Python library, which is more or less a direct mapping to the C bindings.
 
-The purpose of this API is allow you to easily create pseudoterminal applications which work cross-platform but are much more capable than a stanard terminal.
+The purpose of this API is allow you to easily create pseudoterminal applications which work cross-platform and are much more capable than a stanard terminal.
 
-Extra features include:
+Fancy bearlibterminal features include:
 
 * Full RGB (plus alpha) color channels
 * Arbitrary positioning
@@ -15,6 +15,14 @@ Extra features include:
 ## Installation
 
 > pip install beary
+
+Or...
+
+> git clone git@github.com:Yuffster/beary.git
+>
+> cd beary
+>
+> python setup.py install
 
 ## Examples
 
