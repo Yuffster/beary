@@ -10,7 +10,6 @@ config = {
     'version': VERSION,
     'packages': find_packages(exclude=["tests"]),
     'name': 'beary',
-    'test_suite': 'nose.collector',
     'zip_safe': True,
     'install_requires':[
         'bearlibterminal',
